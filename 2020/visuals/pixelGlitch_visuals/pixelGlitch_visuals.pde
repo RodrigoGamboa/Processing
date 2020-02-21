@@ -1,14 +1,12 @@
-float numX = 20;
+float numX = 60;
 float numY = 20;
 float randomColor = 0;
 float timeTracker = 0;
-float timeInterval = 0.1;
+float timeInterval = 0.05;
 
 void setup() {
-  //fullScreen();
-  size(500, 500);
-  //size(1000, 237);
   //size(641, 237);
+  size(1923, 712);
   noStroke();
   timeTracker = millis();
 }
@@ -21,8 +19,8 @@ void draw() {
     timeTracker = millis();
 
     //Start of Timed code
-    for (int y = 0; y < numX; y++) {
-      for (int x = 0; x < numY; x++) {
+    for (int y = 0; y < numY; y++) {
+      for (int x = 0; x < numX; x++) {
         randomColor = random(0, 1);
         //println(randomColor);
         if (randomColor > 0.5) {

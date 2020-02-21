@@ -4,9 +4,9 @@
 Rectangles[] myRects = new Rectangles[1000];
 
 void setup() {
-  //size(641, 237);
-  //size(1000, 237);
-  fullScreen();
+  //243, Screen 1&4
+  //297, Screen 2&3 
+  size(297, 712);
   //println(nums[4]);
   //myRect = new Rectangles();
   for(int i = 0; i < myRects.length; i++) {
@@ -35,8 +35,8 @@ class Rectangles {
   int inc = 1;
   int widthRect = 0;
   int heightRect = 0;
-  int maxWidthRect = int(random(height/3));
-  int maxHeightRect = int(random(height/3));
+  int maxWidthRect = int(random(height/4));
+  int maxHeightRect = int(random(height/4));
   
   void display() {
     rectMode(CENTER);
