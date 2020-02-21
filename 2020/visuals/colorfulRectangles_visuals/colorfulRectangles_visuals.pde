@@ -1,9 +1,11 @@
+//1923 X 712 PX
 //int nums[] = {1, 2, 3, 4, 5};
 //Rectangles myRect;
-Rectangles[] myRects = new Rectangles[10000];
+Rectangles[] myRects = new Rectangles[1000];
 
 void setup() {
-  //size(500, 500);
+  //size(641, 237);
+  //size(1000, 237);
   fullScreen();
   //println(nums[4]);
   //myRect = new Rectangles();
@@ -33,8 +35,8 @@ class Rectangles {
   int inc = 1;
   int widthRect = 0;
   int heightRect = 0;
-  int maxWidthRect = int(random(width/10));
-  int maxHeightRect = int(random(height/10));
+  int maxWidthRect = int(random(height/3));
+  int maxHeightRect = int(random(height/3));
   
   void display() {
     rectMode(CENTER);

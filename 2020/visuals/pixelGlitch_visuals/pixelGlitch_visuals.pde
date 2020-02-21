@@ -1,12 +1,14 @@
-int numX = 100;
-int numY = 100;
+float numX = 20;
+float numY = 20;
 float randomColor = 0;
 float timeTracker = 0;
-float timeInterval = 0.2;
+float timeInterval = 0.1;
 
 void setup() {
   //fullScreen();
-  size(500, 500); 
+  size(500, 500);
+  //size(1000, 237);
+  //size(641, 237);
   noStroke();
   timeTracker = millis();
 }

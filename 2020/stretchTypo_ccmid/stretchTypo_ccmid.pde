@@ -93,16 +93,11 @@ void copyPG() {
 
       copy(pg, int(x1), int(y1), int(w1), int(h1), int(x2), int(y2), int(w2), int(h2));
 
-      noFill();
-      stroke(127);
-      rect(x1, y1, w1, h1);
-      rect(x2, y2, w2, h2);
+      //noFill();
+      //stroke(127);
+      //rect(x1, y1, w1, h1);
+      //rect(x2, y2, w2, h2);
     }
   }
-  /*
-  noStroke();
-  fill(255);
-  rectMode(CENTER);
-  rect(width/2, 70, tw, 5);
-  */
+
 }
