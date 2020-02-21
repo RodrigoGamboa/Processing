@@ -1,12 +1,13 @@
-float numX = 60;
-float numY = 20;
+float numX = 10;
+float numY = 0;  //numY = numX*3
 float randomColor = 0;
 float timeTracker = 0;
 float timeInterval = 0.05;
 
 void setup() {
   //size(641, 237);
-  size(1923, 712);
+  size(243, 712);
+  numY = numX*3;
   noStroke();
   timeTracker = millis();
 }

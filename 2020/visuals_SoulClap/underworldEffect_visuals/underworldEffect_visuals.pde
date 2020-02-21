@@ -15,7 +15,8 @@ int videoHeight = 0;
 
 void setup() {
   noCursor();
-  size(641, 237);
+  fullScreen();
+  //size(480, 360);
   video = new Capture(this, width/2, height/2);
   video.start();
   timeTracker = millis();
