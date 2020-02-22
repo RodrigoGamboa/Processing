@@ -3,20 +3,26 @@
 import processing.video.*;
 
 Capture video;
-PImage prev;
 
+//CHANGE THIS!
+float cameraW = 640;
+float cameraH = 360;
+//----------
+
+float cameraRatio = cameraW/cameraH;
+PImage prev;
 color trackColor;
 float threshold = 25; 
 
 void setup() {
-  size(640, 360);
+  size(641, 237);
   //size(1923, 712);
   //fullScreen();
   String[] cameras = Capture.list();
   video = new Capture(this, cameras[3]);
   video.start();
   //prev = createImage(640, 360, RGB);
-  prev = createImage(640, 360, RGB);
+  prev = createImage(int(cameraW), int(cameraH), RGB);
   trackColor = color(255, 0, 0);
 }
 
