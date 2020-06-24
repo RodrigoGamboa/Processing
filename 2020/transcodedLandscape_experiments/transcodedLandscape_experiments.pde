@@ -56,7 +56,7 @@ void draw() {
       float x2 = j-img.width/2;
       float y2 = i-img.height/2;
       float z2 = -values[j][i]/2-3;
-      //line(x1, y1, z1, x2, y2, z2);      
+      line(x1, y1, z1, x2, y2, z2);      
     }
   }
   

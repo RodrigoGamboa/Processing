@@ -4,7 +4,7 @@ int[] randomY = new int[numCircles];
 int x, maxX, minX = 0;
 int y, maxY, minY = 0;
 int dirX, dirY = 1;
-int speed = 2;
+int speed = 20;
 int circX, circY = 0;
 
 void setup() {
@@ -31,10 +31,10 @@ void setup() {
 
 void draw() {
   //background(0);
-  maxX = int(random(190, 210));
-  minX = int(random(190, 210));
-  maxY = int(random(190, 210));
-  minY = int(random(190, 210));
+  maxX = int(random(width-20, width));
+  minX = int(random(0, 20));
+  maxY = int(random(height-20, height));
+  minY = int(random(0, 20));
   fill(203, 0, 122);
   for (int i = 0; i < numCircles; i++) {
     ellipse(randomX[i], randomY[i], 50, 50);

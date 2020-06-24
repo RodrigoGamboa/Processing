@@ -1,9 +1,10 @@
 int timeTracker = 0;
-float timeInterval = 1;
+float timeInterval = 0.2;
 
 void setup() {
   timeTracker = millis();
-  size(500, 500);
+  //size(500, 500);
+  fullScreen();
   background(0);
   noStroke();
 }

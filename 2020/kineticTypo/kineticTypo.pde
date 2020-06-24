@@ -7,7 +7,8 @@ int yes = 0;
 void setup() {
   font = createFont("RobotoMono-Regular.ttf", 600);
   size(800, 800, P2D);
-  pg = createGraphics(800, 800, P2D);
+  //fullScreen(P2D);
+  pg = createGraphics(width, height, P2D);
 }
 
 void draw() {
@@ -57,4 +58,10 @@ void draw() {
 
 void mousePressed() {
   yes = 1;
+}
+
+void keyPressed() {
+  if (key == ENTER) {
+    yes = 1;
+  }
 }
