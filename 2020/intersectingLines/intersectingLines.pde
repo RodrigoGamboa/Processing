@@ -1,6 +1,6 @@
-int cols = 10;
-int rows = 10;
-int rectSize = 100;
+int cols = 5;
+int rows = 5;
+int rectSize = 20;
 int difX, difY;
 float rot = 0;
 float rotDif = 0.0;
