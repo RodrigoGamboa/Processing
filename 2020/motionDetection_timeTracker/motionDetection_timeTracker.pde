@@ -9,7 +9,7 @@ color trackColor;
 float threshold = 15; 
 
 int timeTracker = 0;
-float timeInterval = 2;
+float timeInterval = 0.05;
 
 void setup() {
   size(480, 320);
@@ -64,11 +64,14 @@ void draw() {
         //avgY += y;
         //count++;
         //pixels[loc] = prev.pixels[loc];
-        pixels[loc] = video.pixels[loc];
+        
+        //pixels[loc] = video.pixels[loc];
+        pixels[loc] = color(0);
         
       } else {
         
-        pixels[loc] = color(random(255), 0, 0);
+        //pixels[loc] = color(255, 255, 0);
+        pixels[loc] = video.pixels[loc];
         //pixels[loc] = color(0);
       }
     }

@@ -1,8 +1,8 @@
-import processing.video.*;
+ import processing.video.*;
 
 Capture video;
 int timeTracker = 0;
-float timeInterval = 0.1;  //Tiempo de intervalo en segundos
+float timeInterval = 0.01;  //Tiempo de intervalo en segundos
 int timeFlag = 0;
 
 int x, y = 0;
@@ -37,7 +37,7 @@ void captureEvent(Capture Event) {
 }
 
 void draw() {
-  if (timeFlag == 1 && millis() > timeTracker + timeInterval*1000) {
+  if (timeFlag == 0 && millis() > timeTracker + timeInterval*1000) {
     timeTracker = millis();
     video.read();
     //tint(random(255), random(255), random(255));
@@ -52,7 +52,7 @@ void draw() {
         //timeFlag = 0;
       }
     }
-  } else if(timeFlag == 0) {
+  } else if(timeFlag == 1) {
     video.read();
     imageMode(CENTER);
     image(video, width/2, height/2, width/2, height/2);

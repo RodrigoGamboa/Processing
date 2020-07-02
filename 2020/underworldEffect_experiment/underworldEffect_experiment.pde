@@ -37,19 +37,19 @@ void draw() {
 }
 
 void showVideo() {
-  for (int x = 0; x < 3; x++) {
-    for (int y = 0; y < 3; y++) {
+  for (int x = 0; x < 10; x++) {
+    for (int y = 0; y < 10; y++) {
       for (int i = 0; i < frame_count; i++) {
         image(frames[(index+i)%frame_count], 160*x, 120*y, 160, 120);
         noFill();
         stroke(255, 1, 154);
-        rect(160*x, 120*y, 160, 120);
+        //rect(160*x, 120*y, 160, 120);
       }
     }
   }
   noFill();
   stroke(255, 1, 154);
   for (int i = 0; i < 10; i++) {
-    rect(random(width), random(height), random(10, 100), random(10, 100));
+    //rect(random(width), random(height), random(10, 100), random(10, 100));
   }
 }
