@@ -15,7 +15,7 @@ float x2;
 float y2;
 
 //Set Position of text
-int textX_1 = 50;
+int textX_1 = 100;
 float textY_1 = 100;
 int textX_2 = 0;
 float textY_2 = 200;
@@ -40,6 +40,10 @@ void setup() {
 }
 
 void draw() {
+  background(127);
+  textX_1 = mouseX;
+  textY_1 = mouseY;
+  
   noFill();
   stroke(0);
   for (int y = 0; y < tilesY; y++) {
