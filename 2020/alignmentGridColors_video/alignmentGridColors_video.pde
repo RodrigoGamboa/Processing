@@ -10,9 +10,9 @@ color colorStroke, colorFill;
 boolean record = false;
 
 void setup() {
-  size(540, 540);
+  size(960, 960);
   colorMode(HSB, 360, 100, 100);
-  //frameRate(3);
+  frameRate(3);
   colorRan = int(random(255));
 
   videoExport = new VideoExport(this, "myVideo.mp4");
@@ -54,10 +54,16 @@ void draw() {
     }
   }
   
+  //Guardando manualmente cada frame
+  //saveFrame("data/frame_####.png");
+  
+  //Uso de librería Video Export
+  /*
   if (record == true) {
     videoExport.saveFrame();
     println("Comienza la grabación.");
   }
+  */
 }
 
 void keyReleased() {
