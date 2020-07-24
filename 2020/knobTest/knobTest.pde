@@ -16,5 +16,6 @@ void setup() {
 }
 
 void draw() {
+  background(255);
   println(knob1Value); 
 }
