@@ -26,12 +26,12 @@ void setup() {
 void draw() {
   background(0);
   image(back, 0, 0);
-  centerX = mouseX;
-  centerY = mouseY;
+  centerX = width/2;
+  centerY = height/2;
   radius = height;
   radiusPaper = radius;
   ran = mouseX/10;
-  
+
   fill(0, 50);
   beginShape();
   for (int i = 0; i < degrees; i = i+10) {
@@ -41,7 +41,7 @@ void draw() {
     curveVertex(circumferenceX, circumferenceY);
   }
   endShape(CLOSE);
-  
+
   fill(255);
   beginShape();
   for (int i = 0; i < degrees; i = i+10) {
@@ -51,7 +51,7 @@ void draw() {
     curveVertex(circumferenceX, circumferenceY);
   }
   endShape(CLOSE);
-  
+
   fill(0, 50);
   beginShape();
   for (int i = 0; i < degrees; i = i+10) {
@@ -61,7 +61,7 @@ void draw() {
     vertex(circumferenceX, circumferenceY);
   }
   endShape(CLOSE);
-  
+
   //fill(0);
   beginShape();
   texture(video);
@@ -72,6 +72,25 @@ void draw() {
     vertex(circumferenceX, circumferenceY, circumferenceX, circumferenceY);
   }
   endShape(CLOSE);
+/*
+  noFill();
+  int curves = 5;
+  float[] randomX = new float[curves];
+  float[] randomY = new float[curves];
+  for (int i = 0; i < curves; i++) {
+    randomX[i] = random(width);
+    randomY[i] = random(height);
+  }
+  for (int x = 0; x < 5; x++) {
+    stroke(255, x*50, 200, 200);
+    strokeWeight(11-2*x);
+    beginShape();
+    for (int i = 0; i < curves; i++) {
+      curveVertex(randomX[i], randomY[i]);
+    }
+    endShape();
+  }
+  */
 }
 
 void movieEvent(Movie m) {
